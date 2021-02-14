@@ -1,0 +1,9 @@
+cvlib==0.2.5
+pytesseract==0.3.3
+opencv_python==4.2.0.32
+matplotlib==3.0.0
+Flask==1.1.2
+langdetect==1.0.7
+googletrans==2.4.0
+Image==1.5.31
+Pillow==7.1.2

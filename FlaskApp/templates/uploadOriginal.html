@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Upload Image</title>
+ </head>
+ <body>
+
+   {% if msg %}
+   <h1>{{ msg }}</h1>
+   {% endif %}
+
+   <h1>Upload new File</h1>
+
+   <form method=post enctype=multipart/form-data>
+     <p><input type=file name=file>
+        <input type=submit value=Upload>
+
+
+         Source Language:
+       <select name="source_languages" >
+           {% for lang in source_languages %}
+           <option value="{{lang}}">{{lang}}</option>
+           {% endfor %}
+       </select>
+
+
+
+         Target Language:
+       <select name="target_languages" >
+           {% for lang in target_languages %}
+           <option value="{{lang}}">{{lang}}</option>
+           {% endfor %}
+       </select>
+   </form>
+
+
+
+   <h1>Result:</h1>
+   {% if img_src %}
+     <img src="{{ img_src }}" alt="{{extracted_text}}">
+   {% endif %}
+
+   {% if extracted_text %}
+     <p> The extracted text from the image above is: <b> {{ extracted_text }} </b></p>
+
+   {% else %}
+     The extracted text will be displayed here
+   {% endif %}
+
+    {% if objects_detected %}
+     <p> The objects detected in the image above is:
+         <b> {{ objects_detected }} </b></p>
+
+   {% else %}
+    <p> The objects detected will be displayed here </p>
+   {% endif %}
+
+   {% if img_src %}
+     <img src="{{ obj_det }}" alt="{{objects_detected}}">
+   {% endif %}
+
+ </body>
+</html>
