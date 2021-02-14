@@ -1,5 +1,5 @@
 # Increasing Web Accessibility: Extracting Text From Images
-### Final Team Project - Team 1
+
 
 If on windows, before running the app you need to:
 1. Install tesseract (https://github.com/UB-Mannheim/tesseract/wiki) for Windows
